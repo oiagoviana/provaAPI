@@ -29,8 +29,8 @@ export function media (n1, n2, n3){
 
 export function corPrimaria (cor) {
     let a = false;
-
-    if (cor=="amarelo" || cor == "azul" || cor == "vermelho") {
+    let b = cor.toLowerCase();
+    if (b =="amarelo" || b == "azul" || b == "vermelho") {
         a = true;
     }
 
@@ -41,9 +41,11 @@ export function ingressoCinema (meia, inteira, diaSemana, nacionalidade) {
     
     let b = meia * 14.25;
     let c = inteira * 28.5;
+    let d = diaSemana.toLowerCase();
+    let e = nacionalidade.toLowerCase();
     
     
-    if (diaSemana == "quarta") {
+    if (d == "quarta") {
         c = inteira * 14.25;
     }
 

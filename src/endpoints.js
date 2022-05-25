@@ -27,7 +27,7 @@ server.get('/somar', (req, resp) => {
     const a = Number(req.query.a);
     const b = Number(req.query.b)
 
-    const x = somar(a, b)
+    const x = somar(a, b) 
     resp.send({
         soma: x
     })
