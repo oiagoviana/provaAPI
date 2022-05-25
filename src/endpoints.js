@@ -158,12 +158,11 @@ server.get('/dia2/freqcaracter/:texto/:caracter', (req, resp) => {
 
 server.post('/dia2/maiornumero', (req, resp) => {
     try{
-    const a = req.body.array;
-
-    const x = maiorNumero(a);
+    const numeros = req.body;
+    const maior = maiorNumero(numeros);
 
     resp.send({
-        maior: x
+        maior: maior
     })
     } catch(err) {
         resp.send({

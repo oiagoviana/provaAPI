@@ -62,12 +62,10 @@ export function FreqCaracter (texto, caracter){
 }
 
 export function maiorNumero (array){
-    let a = -2;
-
-    for(let i = 0; i < array.length; i++) {
-        if (a < array[i]) 
-            a = array[i]
+    let maior = Number.MIN_VALUE;
+    for(let item of array){
+        if(item > maior)
+        maior = item;
     }
-
-    return a;
+    return maior;
 }
