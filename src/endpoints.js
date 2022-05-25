@@ -41,7 +41,7 @@ server.get('/somar', (req, resp) => {
 
 server.post('/somar', (req, resp) => {
     try{
-    const { valores: { a,b } } = req.body;
+    const { a, b } = req.body;
 
     const x = somar (a, b);
 
@@ -125,7 +125,7 @@ server.post('/dia2/ingressocinema', (req,resp) =>{
         
         const x = ingressoCinema(inteira, meia, diaSemana, nacionalidade);
         resp.send({
-            valor: x
+            total: x
         })
     }
     catch(err){
