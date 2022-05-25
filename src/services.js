@@ -37,26 +37,15 @@ export function corPrimaria (cor) {
     return a;
 }
 
-export function ingressoCinema (meia, inteira, diaSemana, nacionalidade) {
-    
-    let b = meia * 14.25;
-    let c = inteira * 28.5;
-    let d = diaSemana.toLowerCase();
-    let e = nacionalidade.toLowerCase();
-    
-    
-    if (d == "quarta") {
-        c = inteira * 14.25;
+export function ingressoCinema (inteira,meia, diaSemana, nacionalidade) {
+    if(nacionalidade.toLowerCase() == 'brasileiro'){
+        return (inteira + meia) * 5;
+    } else if(diaSemana.toLowerCase() == 'quarta'){
+        return (inteira + meia) * 14.25;
+    } else{
+        return (inteira * 28.5) + (meia * 14.25);
     }
 
-    if (nacionalidade == "brasileiro") {
-        b = meia * 5;
-        c = inteira * 5;
-    }
-
-    let a = b + c;
-
-    return a;
 }
 
 export function FreqCaracter (texto, caracter){    
